@@ -83,7 +83,7 @@ async def root():
 
 @app.post("/query")
 async def query(question: str):
-    retriever = vectorstore.as_retriever(search_type="similarity_score_threshold", search_kwargs={"score_threshold": 0.4})
+    retriever = vectorstore.as_retriever(search_type="similarity_score_threshold", search_kwargs={"score_threshold": 0.1})
     context = retriever.get_relevant_documents(question)
 
     if not context:
