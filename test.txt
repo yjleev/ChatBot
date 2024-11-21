@@ -1,0 +1,7 @@
+//terminal
+.\.venv\Scripts\activate
+
+
+//curl
+curl "http://127.0.0.1:8080/"
+curl -X POST "http://localhost:8080/query" -H "Content-Type: application/json" -d "{\"question\": \"이 모델은 무엇을 할 수 있나요?\"}"
